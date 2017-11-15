@@ -28,5 +28,30 @@
         <input type="text" ng-model="name">
         <h1>Hello {{name}}</h1>
     </div>
+    <div ng-init="x=0; y=0; x1=0; y1=0">
+        X:
+        <input type="number" ng-model="x"><br><br>
+        Y:
+        <input type="number" ng-model="y"><br>
+        <p>{{x+y}}</p>
+        <p>{{x-y}}</p>
+        <p>{{x*y}}</p>
+        <p>{{y === 0 ? "Can't divide by 0" : (x/y | number : 2)}}</p>
+
+        <h1>Advanced Calc</h1>
+        X1:
+        <input type="number" ng-model="x1">
+        Y1:
+        <input type="number" ng-model="y1">
+        <select>
+            <option>"+"</option>
+            <option>"-"</option>
+            <option>"*"</option>
+            <option>"/"</option>
+        </select>
+
+
+
+    </div>
     </body>
 </html>
