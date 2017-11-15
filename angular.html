@@ -1,12 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="">
     <head>
         <title></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
-    
+        <h1>This AngularJS? </h1>
+        <p>This is my number: {{5+9}}</p>
+        <p>This is my Wife number:<span ng-bind="' ' + (6+9)"></span></p>
+        <p>This is my name:<span ng-bind="' Zoltan' + ' Mike' + ' ;)'"></span></p>
+        <p><span ng-bind="'Hello' + ' '+(5+8)"></span></p>
+        <!--<div  ng-init="firstName='Zoltan'; lastName='Mike'; age = 45">
+            Age: {{age}}
+            FirtName {{firstName}}
+            LastName {{lastName}}
+
+            <p><span ng-bind="firstName + ' ' + lastName + ' ' + age "></span></p>
+        </div>-->
+        <div ng-init="mike={fname:'zoltan',lname: 'mike', age:45}">
+        <p><span ng-bind="mike.fname | uppercase"></span></p>
+        <p><span ng-bind="mike.lname | uppercase"></span></p>
+    </div>
+    <div>
+        <input type="text" ng-model="name">
+        <h1>Hello {{name}}</h1>
+    </div>
     </body>
 </html>
